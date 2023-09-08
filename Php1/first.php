@@ -93,6 +93,7 @@
         </div>
     </div>
     <?php }; ?>
+    <button><a href="kotak.php" target="_blank" rel="noopener noreferrer">Pencet Ini</a></button>
     <script src="sidebar.js"></script>
     <script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
