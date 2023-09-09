@@ -13,18 +13,23 @@
 
 <body>
 
-    <?php function identitas($nama = "pelanggan", $umur = "?", $sapa = "") 
-        {
-        if($sapa == "malam") {
-            $text1 = "<h1 class='text-center' style='background-color: black;color:white;width:100%;height: 683px'>Selamat malam $nama yang berumur $umur</h1>";
-            echo $text1; }
-        else {
-            $text2 = "<h1 class='text-center'>Selamat pagi $nama yang berumur $umur</h1>";
-            echo $text2; }   
-        } 
+    <?php 
+        function nilai($nilai) {
+            if($nilai < 75) {
+                $tidaklulus = "<h1 class='text-center'>$nilai =<h1 class='text-danger'>Tidak Lulus</h1></h1>";
+                echo $tidaklulus ;
+            }
+            elseif($nilai > 90) {
+                $bagus = "<h1 class='text-center'>$nilai =<h1 class='text-success'>Bagus</h1></h1>";
+                echo $bagus ;
+            }
+            else {
+                $lulus = "<h1 class='text-center'>$nilai =<h1 class='text-secondary'>Lulus</h1></h1>";
+                echo $lulus ;
+            }
+        }
     ?>
-    <?php echo identitas("Andikari",14,"malam") ?>
-    <a href="nilai.php" target="_blank" rel="noopener noreferrer">Test</a>
+    <?php echo nilai("75") ?>
 
     <script src="sidebar.js"></script>
     <script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
