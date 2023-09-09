@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP2</title>
+    <title>PHP3</title>
     <link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -13,47 +13,17 @@
 
 <body>
 
-    <?php
-    for ($no = 1; $no <= 9; $no++) : ?>
-        <div class="row">
-            <?php if ($no % 2 == 0) : ?>
-                <div class="col-3 border" style="width: 150px;height:150px;color: red;"><?php echo "$no" ?></div>
-            <?php else : ?>
-                <div class="col-3 border" style="width: 150px;height:150px;color: blue;"><?php echo "$no" ?></div>
-            <?php endif; ?>
-        </div>
-    <?php endfor; ?>
-
-    <table>
-        <?php for( $i = 1; $i <= 3; $i++) : ?>
-            <?php if($i %2 == 2) : ?>
-                <tr>
-            <?php else: ?>
-                <tr>
-                    <?php endif; ?>
-                    <?php for( $j = 1; $j <= 3; $j++ ) : ?>
-                        
-                    <?php endfor; ?>
-                </tr>
-        <?php endfor; ?>
-    </table>
-
-    <div class="container-fluid" style="width: 200px;">
-        <div class="row">
-            <?php for($i = 1; $i <= 9; $i++) : ?>
-                <?php if($i % 2 == 1) : ?>
-                <div class="col-4 border border-dark" style="background-color: salmon;">
-                    <?php echo($i); ?>
-                </div>
-                <?php else : ?>
-                    <div class="col-4 border border-dark" style="background-color: blue;">
-                    <?php echo($i); ?>
-                </div>
-                <?php endif; ?>
-            <?php endfor; ?>
-        </div>
-    </div>
-    <a href="function.php" target="_blank" rel="noopener noreferrer">test</a>
+    <?php function identitas($nama = "pelanggan", $umur = "?", $sapa = "") 
+        {
+        if($sapa == "malam") {
+            $text1 = "<h1 class='text-center' style='background-color: black;color:white;width:100%;height: 683px'>Selamat malam $nama yang berumur $umur</h1>";
+            echo $text1; }
+        else {
+            $text2 = "<h1 class='text-center'>Selamat pagi $nama yang berumur $umur</h1>";
+            echo $text2; }   
+        } 
+    ?>
+    <?php echo identitas("Andikari",14,"malam") ?>
 
     <script src="sidebar.js"></script>
     <script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
