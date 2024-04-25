@@ -13,24 +13,7 @@
 
 <body>
     
-    <p class="border"><?php echo date("l jS \of F Y h:i:s A");?></p>
-
-    <?php
-    function nilai($nilai)
-    {
-        if ($nilai < 75) {
-            $tidaklulus = "<h1 class='text-center'>$nilai =<h1 class='text-danger text-center'>Tidak Lulus</h1></h1>";
-            echo $tidaklulus;
-        } elseif ($nilai > 89) {
-            $bagus = "<h1 class='text-center'>$nilai =<h1 class='text-success text-center'>Bagus</h1></h1>";
-            echo $bagus;
-        } else {
-            $lulus = "<h1 class='text-center'>$nilai =<h1 class='text-secondary text-center'>Lulus</h1></h1>";
-            echo $lulus;
-        }
-    }
-    ?>
-    <?php echo nilai("90") ?>
+    <?php echo date("l") . "<br>"; ?>
 
     <script src="sidebar.js"></script>
     <script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
